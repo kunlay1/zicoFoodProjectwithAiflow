@@ -1,2 +1,5 @@
 # files to ignore
 .env
+
+# folder to ignore
+zicovenv
