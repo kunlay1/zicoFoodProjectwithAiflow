@@ -1,0 +1,7 @@
+airflow users create \
+  --username admin \
+  --firstname Kunle \
+  --lastname Akin \
+  --role Admin \
+  --email akingboyekunle@gmail.com \
+  --password YOUR_PASSWORD_HERE

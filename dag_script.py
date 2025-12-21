@@ -8,7 +8,7 @@ from Loading import run_loading
 defautl_args = {
     'owner': 'airflow', 
     'depends_on_past': False,
-    'start_date': datetime(2024, 10, 1),    
+    'start_date': datetime(2025, 10, 1),    
     'email': 'akingboyekunle@gmail.com',
     'email_on_failure': True,
     'email_on_retry': True,
@@ -19,7 +19,8 @@ defautl_args = {
 dag = DAG(
     'ETL_Pipeline_ZipcoFood',
     default_args=defautl_args,
-    description='An ETL pipeline for ZipcoFood data using Airflow'
+    description='An ETL pipeline for ZipcoFood data using Airflow',
+    catchup=False # do not backfill missed runs
 )
 
 extraction_task = PythonOperator(
